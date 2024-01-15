@@ -28,5 +28,18 @@ title_label.grid(row=0, column=2)
 title_combobox.grid(row=1, column=2)
 
 
+age_label = tkinter.Label(user_info_frame, text="Age")
+age_spinbox = tkinter.Spinbox(user_info_frame, from_=17, to=110)
+age_label.grid(row=2, column=0)
+age_spinbox.grid(row=3, column=0)
+
+nationality_label = tkinter.Label(user_info_frame, text="Nationality")
+nationality_combobox = ttk.Combobox(user_info_frame, values=["","Indonesia","Palestina","Israel"])
+nationality_label.grid(row=2, column=1)
+nationality_combobox.grid(row=3, column=1)
+
+for widget in user_info_frame.winfo_children():
+    widget.grid_configure(padx=10, pady=5)
+
 
 window.mainloop()
